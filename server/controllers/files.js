@@ -23,7 +23,6 @@ const fileController = {
     },
     getFile: async (request, response) => {
       const item = await File.findById(request.params.id)
-      
       response.json(item.toJSON()) 
     },
     delete:async (request, response) => {
