@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 
@@ -10,9 +10,6 @@ border: 1px solid white;
 `
 
 const File = (props) => {
-
-  const [src, setSrc] = useState(null)
-  const ref = useRef()
 
   const arrayBufferToBase64 = (buffer) => {
     let binary = ''
