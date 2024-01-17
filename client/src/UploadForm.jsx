@@ -92,10 +92,13 @@ const UploadForm = ({ fetch }) => {
         <LabelStyle>select file</LabelStyle>
         <input
             id='file'
-            style={{ textOverflow:'clip', lineHeight: '1em', fontSize: '1em', margin: '0' }}
+            style={{ 
+              textOverflow:'clip', 
+              lineHeight: '1em', 
+              fontSize: '1em', 
+              margin: '0' }}
             type="file"
             name="upload_file"
-            className="form-control-file"
             onChange={onChangeHandler}
         />
       </FlexItem>
