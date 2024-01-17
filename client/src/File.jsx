@@ -6,7 +6,9 @@ const Item = styled.div`
 display: inline-block;
 margin: 1em 1em 1em 1em;
 padding: 1em 1em 1em 1em;
-border: 1px solid white;
+border: 4px solid blue;
+color:darkblue;
+background:darkorange;
 `
 
 const File = (props) => {
@@ -32,12 +34,15 @@ const File = (props) => {
     link.click()
    }
 
-  return <Item>{props.name}<br/>
-    <button onClick={() => fetchSrc(props.id)}>download</button>
-    <a id={props.id}/>
-    <br/>
-    <button onClick={() => props.remove(props.id)}>delete</button>
-  </Item>
+  return <Item><span style={{
+      fontWeight:'900',
+      fontSize:'1.2em'}}>{props.name}</span>
+        <br/>
+        <button onClick={() => fetchSrc(props.id)}>download</button>
+        <a id={props.id}/>
+        <br/>
+        <button onClick={() => props.remove(props.id)}>delete</button>
+      </Item>
 }
 
 export default File

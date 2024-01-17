@@ -15,11 +15,12 @@ const Container2 = styled.div`
   overflow:hidden; 
   color: white; 
   display: flex; 
+  border: 4px solid darkorange;
   flex-direction: column; 
   justify-content: space-between; 
   align-items: flex-start; 
   margin:1em 1em 1em 1em;
-  background-color: black;
+  background-color: darkblue;
   align-content: space-between; 
   flex-wrap: nowrap; 
   padding: .5em; 
