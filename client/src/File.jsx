@@ -16,8 +16,8 @@ const File = (props) => {
     const bytes = [].slice.call(new Uint8Array(buffer))
     // eslint-disable-next-line no-return-assign
     bytes.forEach((b) => binary += String.fromCharCode(b))
-      return window.btoa(binary)
-    }
+    return btoa(binary)
+  }
     
   const fetchSrc = async (id) => {
     const link = document.getElementById(props.id)
@@ -30,7 +30,7 @@ const File = (props) => {
     }
     link.download = props.name
     link.click()
-    }
+   }
 
   return <Item>{props.name}<br/>
     <button onClick={() => fetchSrc(props.id)}>download</button>
