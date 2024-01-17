@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 
@@ -11,7 +11,7 @@ border: 1px solid white;
 const File = (props) => {
 
   const [src, setSrc] = useState(null)
-  const [loaded, setLoaded] = useState(0)
+  const ref = useRef()
 
   const arrayBufferToBase64 = (buffer) => {
     let binary = ''
@@ -29,14 +29,14 @@ const File = (props) => {
       } catch (e) {
        console.log(e)
       }
-      let link = document.createElement('a')
+      let link = document.getElementById(props.id)
       link.download = props.name
-      link.href = src
       link.click()
     }
 
   return <Item>{props.name}<br/>
     <button onClick={() => fetchSrc(props.id)}>download</button>
+    <a id={props.id} href={src}/>
     <br/>
     <button onClick={() => props.remove(props.id)}>delete</button>
   </Item>
