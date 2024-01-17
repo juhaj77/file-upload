@@ -16,10 +16,15 @@ const fileController = {
       response.status(200).send(newFile.toJSON().id)
     },
     getAll: async (_request, response) => {
-      const data = await File.find({})
+      const data = await File.find({},'_id name')
       response.contentType('json')
       const files = data.map(ch => ch.toJSON())
       response.json({ files }) 
+    },
+    getFile: async (request, response) => {
+      const item = await File.findById(request.params.id)
+      
+      response.json(item.toJSON()) 
     },
     delete:async (request, response) => {
         await File.deleteOne({_id:request.params.id})

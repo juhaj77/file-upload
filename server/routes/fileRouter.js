@@ -10,6 +10,8 @@ router.get('/getall', files.getAll)
 
 router.post('/add',upload.single('file'), files.add)
 
+router.get('/get/:id', files.getFile)
+
 router.delete('/delete/:id', files.delete)
 
 module.exports = router
