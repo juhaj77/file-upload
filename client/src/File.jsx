@@ -19,10 +19,8 @@ const File = (props) => {
       return window.btoa(binary)
     }
     
-  let link
-
   const fetchSrc = async (id) => {
-    link = document.getElementById(props.id)
+    const link = document.getElementById(props.id)
     try {
       const res = await axios.get(`http://localhost:8001/api/get/${id}`)
       link.href = `data:${res.data.file.contentType};`
