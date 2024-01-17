@@ -39,14 +39,6 @@ const LabelStyle = styled.p`
   font-size: 1.2em;
   font-weight:bold; 
 `
-const TextInput = styled.input`
-  line-height: 1.5em;
-  height: auto;
-  width: calc(100% - .5em);
-  font-size: 1em; 
-  margin: 0 1em 0 0; 
-  padding: 0;
-`
 
 const UploadForm = ({ fetch }) => {
   const [loaded, setLoaded] = useState(0)
@@ -113,10 +105,11 @@ const UploadForm = ({ fetch }) => {
         </Progress>
         <button
           style={{
-            fontSize: '1.2em', fontWeight: 'bold', verticalAlign: 'middle', display: 'inline-block',
+            fontSize: '1.2em', 
+            fontWeight: 'bold', 
+            padding:'.2em 1em .2em 1em',
           }}
           type="submit"
-          className="btn btn-success btn-block"
           onClick={onClickHandler}
         >
           submit
