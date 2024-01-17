@@ -12,13 +12,6 @@ screenshot:
 
 1. run `npm install` in folder `client`
 1. run `npm install` in folder `server`
-1. create _.env_ file with content:
-   ```
-    PORT=8001
-    MONGODB_URI=mongodb://127.0.0.1:27017/files
-    NODE_ENV=developtment
-   ```
-    into folder `server`
 
 ## usage
 
