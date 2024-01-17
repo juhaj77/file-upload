@@ -1,5 +1,7 @@
 # file-upload
-a simple test project for uploading and fetching different types of files from the Mongo database
+a simple test project for uploading and fetching different types of files from the Mongo database    
+    
+screenshot:     
 ![image of UI](https://github.com/juhaj77/file-upload/blob/main/screenshot.png)    
 ## prerequisites
 
